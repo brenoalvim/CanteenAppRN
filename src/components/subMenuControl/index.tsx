@@ -1,22 +1,16 @@
-import {Text,TouchableOpacity,View} from "react-native"
-import{styles} from "./styles"
+import { Text, TouchableOpacity, View } from "react-native";
+import { styles } from "./styles";
 
-
-export default function SubMenuControl(){
-    return(
+export default function SubMenuControl() {
+  return (
     <>
-            {/* <TouchableOpacity style = {styles.buttonReturn}>
+      {/* <TouchableOpacity style = {styles.buttonReturn}>
             <Text  style = {styles.textButtonReturn}> Voltar </Text>
         </TouchableOpacity> */}
 
-        <View style={styles.iconsContainer}>
-            <View style={styles.icons}>
-
-            </View>
-
-        </View>
+      <View style={styles.iconsContainer}>
+        <View style={styles.icons}></View>
+      </View>
     </>
-
-    )
-
+  );
 }

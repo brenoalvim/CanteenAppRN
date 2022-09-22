@@ -14,12 +14,11 @@ import { useState } from "react";
 export default function Home() {
   const navigation = useNavigation();
   function chamarEntrar() {
-    if (useLogin == "A" && useSenha == "A") {
-      console.log(
-        "Clicou no botão de entrar, aqui terá que haver uma autenticação de usuário"
-      );
+    if (useLogin == "Root" && useSenha == "root") {
+      navigation.navigate("Menu");
+    } else {
+      console.log("Login ou senha incorretos");
     }
-    navigation.navigate("Menu");
   }
 
   const [useLogin, setLogin] = useState("testando");
@@ -27,14 +26,14 @@ export default function Home() {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.textMenu}>Cardápio</Text>
+      <Text style={styles.textMenu}>Login</Text>
 
-      <Text style={styles.textSubMenu}>SimpleMenu</Text>
+      <Text style={styles.textSubMenu}>Insira as informações abaixo</Text>
 
       <TextInput
         autoFocus={true}
         style={styles.textLogin}
-        placeholder="Digite seu login"
+        placeholder="Login"
         placeholderTextColor="#FFF"
         onChangeText={(item) => {
           setLogin(item);
@@ -43,27 +42,13 @@ export default function Home() {
 
       <TextInput
         style={styles.textKey}
-        placeholder="Digite sua senha"
+        placeholder="Senha"
         placeholderTextColor="#FFF"
         onChangeText={(item) => {
           setSenha(item);
         }}
+        secureTextEntry={true}
       />
-
-      {/* <Button
-
-          
-          onPress={()=>{ Alert.alert(
-            "Seja Bem vindo",
-            "Seja bem vindo",
-         
-          )}}
-          title="Entrar"
-          
-          color="#0EA5E9"
-          accessibilityLabel="Learn more about this purple button"
-        
-        /> */}
 
       <TouchableOpacity style={styles.btnEnter} onPress={chamarEntrar}>
         <Text style={styles.textEnter}>ENTRAR</Text>

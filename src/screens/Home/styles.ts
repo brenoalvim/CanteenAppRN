@@ -26,6 +26,7 @@ export const styles = StyleSheet.create({
     padding: 15,
     fontSize: 16,
     color: "#fff",
+    input: "password",
   },
 
   textLogin: {
@@ -40,15 +41,12 @@ export const styles = StyleSheet.create({
   btnEnter: {
     backgroundColor: "#0EA5E9",
     padding: 16,
-    borderBottomColor: "#A6D3E7",
-    borderRightColor: "#A6D3E7",
-    borderBottomWidth: 5,
     borderRadius: 15,
-    borderRightWidth: 3,
   },
   textEnter: {
     textAlign: "center",
     fontWeight: "bold",
     fontSize: 16,
+    color: "#fff",
   },
 });
