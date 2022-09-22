@@ -9,7 +9,6 @@ export const styles = StyleSheet.create({
   containerButton: {
     flex: 1,
     height: "100%",
-
     justifyContent: "space-between",
   },
   buttonDefault: {
