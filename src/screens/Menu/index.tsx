@@ -4,6 +4,7 @@ import {
   View,
   Button,
   Alert,
+  Image,
   TouchableOpacity,
 } from "react-native";
 import ButtonDefault from "../../components/buttonDefault";
@@ -22,14 +23,15 @@ export default function Menu() {
 
   return (
     <View style={styles.container}>
-      <View style={styles.iconsContainer}>
-        <View style={styles.icons}></View>
-      </View>
+      <Image
+        source={require("../../../assets/img/house.png")}
+        style={styles.buttonImageIconStyle}
+      />
 
       <View style={styles.containerButton}>
         <View>
           <TouchableOpacity style={styles.buttonPrimary}>
-            <Text style={styles.textButtonDefault} onPress={onPressVender}>
+            <Text style={styles.textButtonPrimary} onPress={onPressVender}>
               VENDER
             </Text>
           </TouchableOpacity>
@@ -53,7 +55,7 @@ export default function Menu() {
             confirm("Config");
           }}
         >
-          <Text style={styles.textButtonDefault}>CONFIGURAÇÃO</Text>
+          <Text style={styles.textButtonDefault}>CONFIGURAÇÕES</Text>
         </TouchableOpacity>
       </View>
     </View>

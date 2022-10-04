@@ -15,9 +15,10 @@ export default function Home() {
   const navigation = useNavigation();
   function chamarEntrar() {
     if (useLogin == "Root" && useSenha == "root") {
-      navigation.navigate("Menu");
+      navigation.navigate("Menu");+
+      console.log("Login realizado com sucesso!");
     } else {
-      console.log("Login ou senha incorretos");
+      console.log("Login ou senha incorretos!");
     }
   }
 
@@ -51,7 +52,7 @@ export default function Home() {
       />
 
       <TouchableOpacity style={styles.btnEnter} onPress={chamarEntrar}>
-        <Text style={styles.textEnter}>ENTRAR</Text>
+        <Text style={styles.textEnter}>Entrar</Text>
       </TouchableOpacity>
     </View>
   );

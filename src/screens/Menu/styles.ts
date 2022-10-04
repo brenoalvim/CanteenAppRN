@@ -18,7 +18,7 @@ export const styles = StyleSheet.create({
     borderRadius: 10,
   },
   buttonPrimary: {
-    backgroundColor: "#777",
+    backgroundColor: "#0EA5E9",
     marginBottom: 10,
     padding: 16,
     borderRadius: 10,
@@ -26,8 +26,15 @@ export const styles = StyleSheet.create({
 
   textButtonDefault: {
     textAlign: "center",
+    fontWeight: "normal",
+    fontSize: 22,
+    color: "#f2f2f2",
+  },
+  textButtonPrimary: {
+    textAlign: "center",
     fontWeight: "bold",
     fontSize: 22,
+    color: "#fff",
   },
   iconsContainer: {
     alignItems: "center",
@@ -36,6 +43,14 @@ export const styles = StyleSheet.create({
   icons: {
     width: 150,
     height: 150,
-    backgroundColor: "red",
+    border: "1px solid blue",
+    borderRadius: 50,
+  },
+  buttonImageIconStyle: {
+    padding: 10,
+    margin: 5,
+    height: 95,
+    width: 95,
+    resizeMode: "stretch",
   },
 });
